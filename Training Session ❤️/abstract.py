@@ -10,4 +10,4 @@ class UPI(PaymentMethod):
         print(f"paid:{amount:,} via UPI")
 
 upi = UPI()
-upi.pay(90000000000000000000000)
+upi.pay(900000)

@@ -1,3 +1,4 @@
-from math import ceil
-
-print(ceil(0.16))
+def Greet(name):
+    print("hello hi welcome "+name)
+Greet("sreekar")
+Greet("linux")

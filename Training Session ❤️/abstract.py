@@ -1,17 +1,13 @@
 from abc import ABC, abstractmethod
 
-
 class PaymentMethod(ABC):
     #@abstractmethod
     def pay(self, amount):
         pass
 
-
 class UPI(PaymentMethod):
     def pay(self, amount):
-        print(f"paid:{amount} via UPI")
-
+        print(f"paid:{amount:,} via UPI")
 
 upi = UPI()
-
-upi.pay(9000)
+upi.pay(90000000000000000000000)

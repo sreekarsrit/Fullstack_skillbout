@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visitor work List</title>
+</head>
+<body>
+{% for visitor in visitors%}
+<li>
+    <div>
+        <input type="checkbox" name="selected_visitors" value="{{ visitor.id }}">
+        <span>{{visitor.name}}</span>-<span>{{visitor.message}}</span>
+    </div>
+    <div>
+        <span>{{visitor.created_at}}</span>
+    </div>
+    <div><a href="{%url 'visitor-edit' visitor.id %}">Edit</a></div>
+    <div><a href="{%url 'visitor-delete' visitor.id %}">delete</a></div>
+</li>
+{% empty%}
+<li>No visitors</li>
+{%endfor%}
+</body>
+</html>
